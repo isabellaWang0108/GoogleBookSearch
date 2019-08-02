@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const db = require("../models");
-mongoose.set('useCreateIndex', true);
+// mongoose.set('useCreateIndex', true);
 // This file empties the Books collection and inserts the books below
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/reactreadinglist", { useNewUrlParser: true }
 );
 
 const bookSeed = [
